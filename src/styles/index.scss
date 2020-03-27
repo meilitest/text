@@ -1,0 +1,255 @@
+@charset "UTF-8";
+@import "~normalize.css";//reset CSS
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  border:none;
+}
+
+img,
+object,
+embed {
+  max-width: 100%;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+button:focus,
+input:focus,
+p:focus,
+a:focus,
+a:active,
+div:focus,
+label:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+// 常用样式
+// 浮动
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+// 显示隐藏
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.none {
+  display: none;
+}
+
+.cursor{
+  cursor: pointer;
+}
+
+// 布局
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex.space-between{
+  justify-content: space-between;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+// 折行
+.wordBreak {
+    word-break: break-all;
+}
+
+//超出省略号
+.word-hidden {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+//禁止用户选中
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.select-text{
+  user-select: text;
+}
+
+//去除鼠标点击事件
+.click-disabled {
+  pointer-events: none; /*IE11+*/
+}
+
+// 文本
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+// margin
+.margin-b10{
+  margin-bottom: 10px;
+}
+
+.margin-r10{
+  margin-right: 10px;
+}
+
+.margin-b15{
+  margin-bottom: 15px;
+}
+.margin-b20{
+  margin-bottom: 20px;
+}
+
+.margin-t20{
+  margin-top: 20px;
+}
+
+// padding
+.padding-20{
+  padding: 20px;
+}
+.padding-l20{
+  padding-left: 20px;
+}
+
+.padding-l2em{
+  padding-left: 2em;
+}
+
+.padding-t20{
+  padding-top: 20px;
+}
+.padding-b20{
+  padding-bottom: 20px;
+}
+// percent width
+.width-per-50{
+  width: 50%;
+}
+
+.width-per-100{
+  width: 100%;
+}
+
+
+.height-per-100{
+  height: 100%;
+}
+
+.min-height-300{
+  min-height: calc(100% - 300px);
+}
+
+.font-24{
+  font-size: 24px;
+}
+.font-16{
+  font-size: 16px;
+}
+.font-14{
+  font-size: 14px;
+}
+
+// main-container global css
+.app-container {
+  padding: 20px;
+}
